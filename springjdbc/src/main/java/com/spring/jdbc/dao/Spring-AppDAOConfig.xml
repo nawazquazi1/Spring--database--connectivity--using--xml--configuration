@@ -12,13 +12,13 @@
 		<property name="password" value="root" />
 	</bean>
 
+	<bean class="org.springFramework.jdbc.core.JdbcTemplate" name="jdbcTemplate">
+		<property name="jdbcTemplate" ref="dataSource">
+		</property>
+	</bean>
 
 	<bean name="studentDao" class="com.spring.jdbc.dao.StudentDaoImpl">
 	<property name="jdbcTemplate" ref="jdbcTemplate"/>
 	</bean>
 
-	<bean class="org.springFramework.jdbc.core.JdbcTemplate" name="jdbcTemplate">
-		<property name="jdbcTemplate" value="dataSource">
-		</property>
-	</bean>
 </beans>
